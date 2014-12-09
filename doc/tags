@@ -4,5 +4,6 @@ emyth-insert	emyth.txt	/*emyth-insert*
 emyth-normal	emyth.txt	/*emyth-normal*
 emyth-notes	emyth.txt	/*emyth-notes*
 emyth-salesforce	emyth.txt	/*emyth-salesforce*
+emyth-tmux	emyth.txt	/*emyth-tmux*
 emyth-visual	emyth.txt	/*emyth-visual*
 emyth.txt	emyth.txt	/*emyth.txt*

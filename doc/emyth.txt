@@ -7,29 +7,69 @@ Nate's cheat sheet of Vim stuff he always forgets.
 CONTENTS
 
   1. Common............................................|emyth-common|
-  2. Salesforce....................................... |emyth-salesforce|
-  3. Normal Mode.......................................|emyth-normal|
-  4. Visual Mode.......................................|emyth-visual|
-  5. Insert Mode.......................................|emyth-insert|
-  6. Notes.............................................|emyth-notes|
-  7. Rebuilding this file
+  2. Tmux..............................................|emyth-tmux|
+  3. Salesforce....................................... |emyth-salesforce|
+  4. Normal Mode.......................................|emyth-normal|
+  5. Visual Mode.......................................|emyth-visual|
+  6. Insert Mode.......................................|emyth-insert|
+  7. Notes.............................................|emyth-notes|
+  8. Rebuilding this file
 
 ===============================================================================
 1. Common                                              *emyth-common*
 
    - <leader> = ' ' (space bar)
+   - <leader>e: Opens ~/.vimrc
    - <leader>nn: Opens NERDTree
+   - gf: Goto the file under the cursor
+   - :vsplit: Vertically splits Vim Window
+   - :split: Horizontially splits Vim Window
+   - CTRL-l: Move to right Vim Window
+   - CTRL-h: Move to left Vim Window
+   - CTRL-j: Move to bottom Vim Window
+   - CTRL-k: Move to top Vim Window
+   - CTRL-t: Creates a new Vim Tab (:tabnew)
+   - <leader>1: Goto first tab
+   - <leader>2: Goto second tab
+   - <leader>3: Goto third tab
+   - ...
+   - <leader>0: Goto tenth tab
    - <leader>c: Toggles Crosshairs
 
 ===============================================================================
-2. Salesforce                                          *emyth-salesforce*
+2. Tmux                                                *emyth-tmux*
+
+When Tmux is running, it will default to a single window, note the number 1 with
+the current name is typically zsh (the current process name).  It is better if
+you explicitly name each of the windows so you remembe where things are.
+
+   - <tleader> = CTRL-A
+   - <tleader>,: Rename current window 
+   - <tleader>-: New horizontal pane below current pane
+   - <tleader>|: New vertical pane right of current pane
+   - <tleader>j: Goto pane below
+   - <tleader>l: Goto pane right
+   - <tleader>h: Goto pane left
+   - <tleader>c: New window (think tab)
+   - <tleader>1: Goto first window (think tab)
+   - <tleader>n: Goto nth window (think tab)
+
+===============================================================================
+3. Salesforce                                          *emyth-salesforce*
+
+Currently you have to be in one of the apex object sub-directories in order to
+use the deploy and retrieve commands
 
    - <leader> = ' ' (space bar)
-   - <leader>nn: Opens NERDTree
-   - <leader>c: Toggles Crosshairs
+   - <leader>dd: Deploy Apex
+   - <leader>rr: Retrieve Apex
+   - <leader>11: Query results to pane
+   - <leader>22: Query results to pane (csv)
+   - <leader>33: Query results to Vim window
+   - <leader>44: Query results to Vim window (csv)
 
 ===============================================================================
-3. Normal Mode                                         *emyth-normal*
+4. Normal Mode                                         *emyth-normal*
 
    - :wall : Save modified buffers
    - :x : Save buffer only if modified, then exit (better than :wq)
@@ -49,7 +89,7 @@ CONTENTS
    - :reg : list registers (and show what’s in them)
 
 ===============================================================================
-4. Visual Mode                                         *emyth-visual*
+5. Visual Mode                                         *emyth-visual*
 
    - SHIFT-[LEFT/RIGHT] : Shift one word left or right
    - J : Join the highlighted lines, removing unnecessary whitespace.
@@ -60,7 +100,7 @@ CONTENTS
      contents)
 
 ===============================================================================
-5. Insert Mode                                         *emyth-insert*
+6. Insert Mode                                         *emyth-insert*
 
    - <C-N>: Complete word
    - <C-N><C-P>: Complete word (?)
@@ -72,14 +112,14 @@ CONTENTS
 
 
 ===============================================================================
-6. NOTES                                               *emyth-notes*
+7. NOTES                                               *emyth-notes*
 
-Nunc pellentesque aliquam orci. Proin neque elit, mollis vel, tristique nec,
-varius consectetuer, lorem. Nam malesuada ornare nunc. Duis turpis turpis,
-fermentum a, aliquet.
+  - <leader> = ' ' (spacebar)
+  - capslock = CTRL
+  - right command = ESC
 
 ===============================================================================
-7. Rebuilding this file.
+8. Rebuilding this file.
 
 This file is loaded as a plugin. If you ever need to rebuild the tags file, run
 this command: >
