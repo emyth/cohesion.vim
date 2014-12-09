@@ -1,7 +1,7 @@
 *emyth.txt*  For Vim version 7.4Last change: 2014 December 9
 *emyth*
 
-Nate's cheat sheet of Vim stuff he always forgets.
+EMyth's cheat sheet: vim stuff we always forgets.
 
 ===============================================================================
 CONTENTS
