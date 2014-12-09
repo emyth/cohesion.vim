@@ -19,6 +19,7 @@ CONTENTS
 1. Common                                              *emyth-common*
 
    - <leader> = ' ' (space bar)
+   - CTRL-]: goto Vim Link
    - <leader>e: Opens ~/.vimrc
    - <leader>nn: Opens NERDTree
    - gf: Goto the file under the cursor
