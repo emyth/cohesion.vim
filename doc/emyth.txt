@@ -43,6 +43,8 @@ CONTENTS
 
    - git branch -d branch
    - git push origin :branch
+   - git tag -a tag-name -m 'tag message'
+   - git push origin tag-name
 
 ===============================================================================
 3. Tmux                                                *emyth-tmux*
