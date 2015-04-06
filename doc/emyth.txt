@@ -19,6 +19,8 @@ CONTENTS
 ===============================================================================
 1. Common                                              *emyth-common*
 
+   - set -g status-bg green
+   - set -g status-fg black
    - <leader> = ' ' (space bar)
    - CTRL-]: goto Vim Link
    - <leader>e: Opens ~/.vimrc
