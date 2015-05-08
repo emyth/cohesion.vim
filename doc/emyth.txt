@@ -14,7 +14,8 @@ CONTENTS
   6. Visual Mode.......................................|emyth-visual|
   7. Insert Mode.......................................|emyth-insert|
   8. Notes.............................................|emyth-notes|
-  9. Rebuilding this file
+  9. Sysadmin..........................................|emyth-sysadmin|
+ 10. Rebuilding this file
 
 ===============================================================================
 1. Common                                              *emyth-common*
@@ -131,7 +132,21 @@ use the deploy and retrieve commands
   - right command = ESC
 
 ===============================================================================
-9. Rebuilding this file.
+===============================================================================
+9. Sysadmin                                               *emyth-sysadmin*
+
+  - adduser exampleuser
+  - usermod -a -G sudo exampleuser
+  - ssh-copy-id root@YOURSERVERIP
+  - linode list
+  - linode show training
+  - bundle exec knife solo prepare root@YOURSERVERIP
+  - knife cookbook create redis-server -o site-cookbooks
+  - bundle exec knife solo cook root@YOURSERVERIP
+  - bundle exec knife bootstrap root@YOURSERVERIP
+
+===============================================================================
+10. Rebuilding this file.
 
 This file is loaded as a plugin. If you ever need to rebuild the tags file, run
 this command: >
