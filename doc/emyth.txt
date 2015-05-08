@@ -138,12 +138,83 @@ use the deploy and retrieve commands
   - adduser exampleuser
   - usermod -a -G sudo exampleuser
   - ssh-copy-id root@YOURSERVERIP
+  - ssh-keygen -R YOURSERVERIP | hostname w:qa
   - linode list
   - linode show training
   - bundle exec knife solo prepare root@YOURSERVERIP
   - knife cookbook create redis-server -o site-cookbooks
   - bundle exec knife solo cook root@YOURSERVERIP
   - bundle exec knife bootstrap root@YOURSERVERIP
+  - ssh-keygen -t rsa -C "lenny.l.miller@gmail.com"
+  - eval "$(ssh-agent -s)"
+  - ssh-add ~/.ssh/id_rsa
+  - sudo apt-get install xclip
+  - cat /.myfile.txt|xclip -i
+  
+
+23  curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user
+24  curl -i https://api.github.com/repos/twbs/bootstrap
+25  curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user/repos
+26  curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user/keys
+27  clear;curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user/keys
+28  clear;curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' -d '{"scopes":["read:public_key"] }' https://api.github.com/user/keys
+29  curl -i -u heart-r -d '{"scopes":["read:public_key"], "note": "Adding a new key"}' https://api.github.com/user/keys
+ '
+  - The following is an example of how to create an oauth token for my heart-r
+    github account:  see https://developer.github.com/guides/getting-started/ 
+======================>
+trainee@li1003-120:~$ curl -i -u heart-r -d '{"scopes": ["repo", "user"], "note": "getting-started"}' https://api.github.com/authorizations
+Enter host password for user 'heart-r':
+HTTP/1.1 201 Created
+Server: GitHub.com
+Date: Fri, 08 May 2015 18:40:31 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 610
+Status: 201 Created
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4998
+X-RateLimit-Reset: 1431113662
+Cache-Control: private, max-age=60, s-maxage=60
+ETag: "b1724ceea1935c9b947476811fe4396f"
+Location: https://api.github.com/authorizations/17930211
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+X-GitHub-Media-Type: github.v3
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: deny
+Content-Security-Policy: default-src 'none'
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit,
+X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+X-Accepted-OAuth-Scopes, X-Poll-Interval
+Access-Control-Allow-Origin: *
+X-GitHub-Request-Id: 2D213578:741A:DB3AC15:554D031F
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+Vary: Accept-Encoding
+X-Served-By: 8dd185e423974a7e13abbbe6e060031e
+
+{
+  "id": 17930211,
+  "url": "https://api.github.com/authorizations/17930211",
+  "app": {
+    "name": "getting-started (API)",
+    "url": "https://developer.github.com/v3/oauth_authorizations/",
+    "client_id": "00000000000000000000"
+  },
+  "token": "3e2a75df4cc0986464060ed77feb7133379e65f6",
+  "hashed_token": "9923e5f93721de0fac021880791a6b168220db9859af4cdc041fc040f3298f9d",
+  "token_last_eight": "379e65f6",
+  "note": "getting-started",
+  "note_url": null,
+  "created_at": "2015-05-08T18:40:31Z",
+  "updated_at": "2015-05-08T18:40:31Z",
+  "scopes": [
+    "repo",
+    "user"
+  ],
+  "fingerprint": null
+}
+<======================
 
 ===============================================================================
 10. Rebuilding this file.
