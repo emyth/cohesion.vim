@@ -152,12 +152,12 @@ use the deploy and retrieve commands
   - cat /.myfile.txt|xclip -i
   
 
-23  curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user
+23  curl -i -H 'Authorization: token FAKE-TOKEN' https://api.github.com/user
 24  curl -i https://api.github.com/repos/twbs/bootstrap
-25  curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user/repos
-26  curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user/keys
-27  clear;curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' https://api.github.com/user/keys
-28  clear;curl -i -H 'Authorization: token f0f61739edef278f18830dea5afae0180063420e' -d '{"scopes":["read:public_key"] }' https://api.github.com/user/keys
+25  curl -i -H 'Authorization: token FAKE-TOKEN' https://api.github.com/user/repos
+26  curl -i -H 'Authorization: token FAKE-TOKEN' https://api.github.com/user/keys
+27  clear;curl -i -H 'Authorization: token FAKE-TOKEN' https://api.github.com/user/keys
+28  clear;curl -i -H 'Authorization: token FAKE-TOKEN' -d '{"scopes":["read:public_key"] }' https://api.github.com/user/keys
 29  curl -i -u heart-r -d '{"scopes":["read:public_key"], "note": "Adding a new key"}' https://api.github.com/user/keys
  '
   - The following is an example of how to create an oauth token for my heart-r
@@ -201,7 +201,7 @@ X-Served-By: 8dd185e423974a7e13abbbe6e060031e
     "url": "https://developer.github.com/v3/oauth_authorizations/",
     "client_id": "00000000000000000000"
   },
-  "token": "3e2a75df4cc0986464060ed77feb7133379e65f6",
+  "token": "FAKE-TOKEN",
   "hashed_token": "9923e5f93721de0fac021880791a6b168220db9859af4cdc041fc040f3298f9d",
   "token_last_eight": "379e65f6",
   "note": "getting-started",
