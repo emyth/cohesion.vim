@@ -20,6 +20,7 @@ CONTENTS
 ===============================================================================
 1. Common                                              *emyth-common*
 
+   - virtualenv -p python3 name
    - set -g status-bg green
    - set -g status-fg black
    - <leader> = ' ' (space bar)
