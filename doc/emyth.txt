@@ -19,8 +19,13 @@ CONTENTS
 
 ===============================================================================
 1. Common                                              *emyth-common*
-
+   
+   - /usr/local/etc/nginx (mac)
+   - /etc/nginx (ubunto)
+   - sudo /etc/init.d/minecraft status | start | stop | restart
+   - usermod -a -G sudo |USERNAME|
    - virtualenv -p python3 name
+   - /etc/init.d/nginx start
    - set -g status-bg green
    - set -g status-fg black
    - <leader> = ' ' (space bar)
