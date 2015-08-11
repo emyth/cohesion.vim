@@ -19,7 +19,8 @@ CONTENTS
 
 ===============================================================================
 1. Common                                              *emyth-common*
-   
+
+   - swap-window -s 3 -t 1
    - /usr/local/etc/nginx (mac)
    - /etc/nginx (ubunto)
    - sudo /etc/init.d/minecraft status | start | stop | restart
