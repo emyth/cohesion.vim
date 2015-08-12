@@ -20,6 +20,9 @@ CONTENTS
 ===============================================================================
 1. Common                                              *emyth-common*
 
+   - http://pay.staging.wpengine.com
+   - git remote add staging git@git.wpengine.com:staging/pay.git
+   - git remote -v
    - swap-window -s 3 -t 1
    - /usr/local/etc/nginx (mac)
    - /etc/nginx (ubunto)
