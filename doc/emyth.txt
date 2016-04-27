@@ -54,6 +54,7 @@ CONTENTS
 ===============================================================================
 2. Git                                                 *emyth-git*
 
+   - git log production..master
    - git branch -d branch
    - git push origin :branch
    - git tag -a tag-name -m 'tag message'
