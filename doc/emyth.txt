@@ -230,45 +230,62 @@ X-Served-By: 8dd185e423974a7e13abbbe6e060031e
 ===============================================================================
 10. Regexp                                              *emyth-regexp*
 
-+-----------+--------------------------+-------------------------------------+
-| Character | Meaning                  | Example                             |
-+-----------+--------------------------+-------------------------------------+
-| .         | Any single character     | 'c.t' mathces cat, cut, cot, but    |
-|           |                          | not caught, coat.                   |
-+-----------+--------------------------+-------------------------------------+
-| [ ]       | A single character from  | 'c[aeuou]t' matches cat, cut, cot,  |
-|           | within the set(bracket   | but not coat, cht.                  |
-|           | expression)              |                                     |
-+-----------+--------------------------+-------------------------------------+
-| ^         | beginning of line anchor | '^r' matches a line that begins     |
-|           |                          | with r.                             |
-+-----------+--------------------------+-------------------------------------+
-| $         | End of line anchor       | 'bash$' matches a line that ends    |
-|           |                          | with bash.                          |
-+-----------+--------------------------+-------------------------------------+
-| \         | Escape the following     | 'c\.t' matches c.t exactly          |
-|           | character                |                                     |
-+-----------+--------------------------+-------------------------------------+
-| *         | Zero or more of the      | 'c.*t' matches cat, cut, cot, coat  |
-|           | previous item            | caught, and ct                      |
-|           |                          |                                     | 
-|           |                          | 'c[aeiou]*t' matches cat, cut, cot, | 
-|           |                          | coat, and ct, but not caught        | 
-|           |                          |                                     | 
-+-----------+--------------------------+-------------------------------------+
-| +         | One or more of the       | 'c[aeiou]+t' matches cat, cut, cot, | 
-|           | previous item            | coat, but not ct or caught          | 
-|           |                          |                                     | 
-+-----------+--------------------------+-------------------------------------+
-| ?         | Zero of one of the       | 'c.?t' matches cut, cht, and ct,    | 
-|           | previous item            | but not coat or caught              | 
-|           |                          |                                     | 
-+-----------+--------------------------+-------------------------------------+
-|           |                          |                                     | 
-|           |                          |                                     | 
-|           |                          |                                     | 
-+-----------+--------------------------+-------------------------------------+
-  
++------------+--------------------------+-------------------------------------+
+| Character  | Meaning                  | Example                             |
++------------+--------------------------+-------------------------------------+
+| .          | Any single character     | 'c.t' mathces cat, cut, cot, but    |
+|            |                          | not caught, coat.                   |
++------------+--------------------------+-------------------------------------+
+| [ ]        | A single character from  | 'c[aeuou]t' matches cat, cut, cot,  |
+|            | within the set(bracket   | but not coat, cht.                  |
+|            | expression)              |                                     |
++------------+--------------------------+-------------------------------------+
+| ^          | beginning of line anchor | '^r' matches a line that begins     |
+|            |                          | with r.                             |
++------------+--------------------------+-------------------------------------+
+| $          | End of line anchor       | 'bash$' matches a line that ends    |
+|            |                          | with bash.                          |
++------------+--------------------------+-------------------------------------+
+| \          | Escape the following     | 'c\.t' matches c.t exactly          |
+|            | character                |                                     |
++------------+--------------------------+-------------------------------------+
+| *          | Zero or more of the      | 'c.*t' matches cat, cut, cot, coat  |
+|            | previous item            | caught, and ct                      |
+|            |                          |                                     | 
+|            |                          | 'c[aeiou]*t' matches cat, cut, cot, | 
+|            |                          | coat, and ct, but not caught        | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
+| +          | One or more of the       | 'c[aeiou]+t' matches cat, cut, cot, | 
+|            | previous item            | coat, but not ct or caught          | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
+| ?          | Zero of one of the       | 'c.?t' matches cut, cht, and ct,    | 
+|            | previous item            | but not coat or caught              | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
+| |          | Logical OR               | 'root|wheel' matches a line with    | 
+|            |                          | "root" or "wheel" in it.            | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
+| [:alpha:]  | POSIX character classes  | '^[[:alnum:][:space:]]*$' matches    | 
+| [:alpnum:] | used inside a bracket    | a line with only alphaniumeric      | 
+| [:upper:]  | expression               | characters and white space          | 
+| [:lower]   |                          |                                     | 
+| [:digit:]  |                          |                                     | 
+| [:space:]  |                          |                                     | 
+| [:punct:]  |                          |                                     | 
+|            |                          |                                     | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
+|            |                          |                                     | 
+|            |                          |                                     | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
+|            |                          |                                     | 
+|            |                          |                                     | 
+|            |                          |                                     | 
++------------+--------------------------+-------------------------------------+
 ===============================================================================
 10. Rebuilding this file.
 
