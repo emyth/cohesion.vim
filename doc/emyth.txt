@@ -20,6 +20,17 @@ CONTENTS
 ===============================================================================
 1. Common                                              *emyth-common*
 
+   - .tern-project
+      {
+          "libs": [
+              "browser",
+              "underscore",
+              "jquery"
+                  ],
+              "plugins": {
+                "node": {}
+              }
+      }
    - http://pay.staging.wpengine.com
    - git remote add staging git@git.wpengine.com:staging/pay.git
    - git remote -v
