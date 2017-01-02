@@ -20,6 +20,7 @@ CONTENTS
 ===============================================================================
 1. Common                                              *emyth-common*
 
+    - cd "$(brew --repo)" && git fetch && git reset --hard origin/master && brew update
    - .tern-project
       {
           "libs": [
